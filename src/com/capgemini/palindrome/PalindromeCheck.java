@@ -1,20 +1,17 @@
 package com.capgemini.palindrome;
 
+/**
+ * checks if a text is a palindrome
+ * @author EMALARCZ
+ *
+ */
 public class PalindromeCheck {
 	
-	private static boolean isPalindrome (String text){
-		
-		if (text.length() <= 1){
-			return true;
-		}
-		
-		if (text.charAt(0) != text.charAt(text.length()-1)){
-			return false;
-		}
-		
-		return isPalindrome(text.substring(1, text.length()-1));
-	}
-	
+	/**
+	 * preprocess text and checks if it's a palindrome
+	 * @param text
+	 * @return boolean (true for a palindrome, false otherwise, throws an excetion for an empty String)
+	 */
 	public static boolean checkIfPalindrome(String text){
 			text = TextValidation.simpleText(text);
 		
@@ -29,4 +26,17 @@ public class PalindromeCheck {
 			}
 	}
 	
+	private static boolean isPalindrome (String text){
+		
+		if (text.length() <= 1){
+			return true;
+		}
+		
+		if (text.charAt(0) != text.charAt(text.length()-1)){
+			return false;
+		}
+		
+		return isPalindrome(text.substring(1, text.length()-1));
+	}
+
 }

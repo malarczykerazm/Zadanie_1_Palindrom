@@ -32,7 +32,7 @@ public class PalindromeCheckTests {
 	@Test
 	public void shouldBePalindromeWithSpecialSigns() {
 		//given
-		String text = "87986 Koby�?a ma MA 7987 99 ły bok *(&*&^ 876765";
+		String text = "87986 Kobyła ma MA 7987 99 ły bO0k *(&*&^ 876765";
 		
 		//when
 		
